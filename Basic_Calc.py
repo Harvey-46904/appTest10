@@ -4,7 +4,7 @@
 import os
 print(".::BASIC CAL::.")
 a=10
-b=5
+b=7
 add=a+b
 os.system("cls")
 print("the add is : ",add)
