@@ -11,7 +11,7 @@ def calc(a,b):
 os.system("sls")
 print("Press number 1: ")
 n1=int(input())
-n2=int(input("Press number 2: "))
+n2=int(input("Press number 2 : "))
 
 print("the answer is :",calc(n1,n2))
 
