@@ -50,5 +50,41 @@ class Post(manage):
     def __str__(self):
         return self.title
 
+class Web(manage,social):
+    about_us=models.TextField('About us')
+    phone=models.CharField('Phone',max_length=10)
+    email=models.EmailField('E-mail',max_length=200)
+    class Meta:
+        verbose_name='web'
+        verbose_name_plural='webs'
+    def __str__(self):
+        return self.about_us
+class SocialNteworks(manage,social):
+    class Meta:
+        verbose_name='Social network'
+        verbose_name_plural='Social networks'
+    def __str__(self):
+        return self.facebook
+class Contact(manage):
+    firstname=models.CharField('Firtsname',max_length=100)
+    lastname=models.CharField('Lastname',max_length=100)
+    email=models.EmailField('E-mail',max_length=150)
+    subject=models.CharField('Subject',max_length=150)
+    message= models.TextField('Message')
+    class Meta:
+        verbose_name='contact'
+        verbose_name_plural='contacts'
+    def __str__(self):
+        return self.subject
+
+class Suscriber(manage):
+    email=models.EmailField('Email',max_length=150)
+    class Meta:
+        verbose_name='suscriber'
+        verbose_name_plural='suscribers'
+    def __str__(self):
+        return self.email
+
+
 
 
