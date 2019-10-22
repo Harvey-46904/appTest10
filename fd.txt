@@ -1,0 +1,50 @@
+para instalarlo dentro de django se ejectua asi
+pip install psycopg2
+
+crear nueva proyecto
+django-admin startproject market
+iniciar servidor
+py manage.py runserver
+
+como creamos apps
+
+py manage.py startapp "nombre"
+
+
+makemigrations --> empaquetamiento
+migrate --> push a la base de datos
+
+
+py manage.py makemigrations "nombre"
+
+genera sql propio de ese modelo
+
+py manage.py sqlmigrate clients 0001
+
+migrate---
+
+py manage.py migrate
+
+
+pan de cada dia
+py manage.py shell
+
+
+agregar modelo
+from clients.models import 
+
+obtener tiempo
+from django.utils import timezone
+
+
+q=Question(question_text="Do youy like coffe?",descriptions="this is my second",pub_date=timezone.now())
+q.save()
+
+crear super usuario
+py manage.py createsuperuser
+
+select en django
+user.objects.all()
+
+alimentar desde html
+pip install django-ckeditor 
